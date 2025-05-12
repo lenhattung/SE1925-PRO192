@@ -13,3 +13,9 @@ https://uw-edu-pl.zoom.us/j/93488290903
 
 4. Tài liệu môn học:
 + https://flm.fpt.edu.vn/DefaultSignin
++ https://github.com/lenhattung/SE1925-PRO192
++ https://lms-hcm.fpt.edu.vn/
+
+5. Tools:
++ Netbeans 8.2
++ JDK 8

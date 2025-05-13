@@ -21,3 +21,6 @@ Key:    WUJ6Z6.;jOSaN$cDe5Q+
 5. Tools:
 + Netbeans 8.2
 + JDK 8
+
+6. Videos
+Slot 1: 

@@ -31,5 +31,7 @@ public class Ex06 {
         for (int x : c) {
             System.out.println(x);
         }
+
+        //a = l + p;
     }
 }

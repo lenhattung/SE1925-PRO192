@@ -10,7 +10,10 @@
 public class Main {
     public static void main(String[] args) {
         Coffee cf1 = new Coffee("Trung Nguyen", 0.5, 150000);
-        
-        String s1 = new String("Welcome TT Phap - Emanuel Macron");
+        System.out.println(cf1.getPrice());
+        cf1.setPrice(-15);
+        System.out.println(cf1.getPrice());
+        cf1.setPrice(100000);
+        System.out.println(cf1.getPrice());
     }
 }

@@ -21,7 +21,7 @@ public class Supplier {
         this.id = id;
         setName(name);
         this.address = address;
-        this.phone = phone;
+        setPhone(phone);
         this.status = status;
     }
 
@@ -60,10 +60,15 @@ public class Supplier {
     }
 
     public void setPhone(String phone) {
-        this.phone = phone;
+        String regex = "^0\\d{8,9}$";
+        if(phone.matches(regex)){
+            this.phone = phone;
+        }else{
+            this.phone="000.000.0000";
+        }
     }
 
-    public boolean isStatus() {
+    public boolean getStatus() {
         return status;
     }
 

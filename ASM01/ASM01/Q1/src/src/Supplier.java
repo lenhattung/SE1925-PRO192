@@ -15,12 +15,16 @@ public class Supplier {
     private boolean status;
 
     public Supplier() {
+        setId(0);
+        setName("");
+        setAddress("");
+        setPhone("");
     }
 
     public Supplier(int id,String name, String address, String phone) {
-        this.id = id;
+        setId(id);
         setName(name);
-        this.address = address;
+        setAddress(address);
         setPhone(phone);
     }
 
@@ -82,7 +86,7 @@ public class Supplier {
 
     @Override
     public String toString() {
-        return "Supplier{" + "id=" + id + ", name=" + name + ", address=" + address + ", phone=" + phone + ", status=" + status + '}';
+        return  id + "," + getName() + "," + getAddress() + "," + phone + "," + (status?"Available":"Unavailable") ;
     }
     
     

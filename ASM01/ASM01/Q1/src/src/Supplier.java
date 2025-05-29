@@ -17,12 +17,11 @@ public class Supplier {
     public Supplier() {
     }
 
-    public Supplier(int id, String name, String address, String phone, boolean status) {
+    public Supplier(int id,String name, String address, String phone) {
         this.id = id;
         setName(name);
         this.address = address;
         setPhone(phone);
-        this.status = status;
     }
 
     public int getId() {
@@ -34,7 +33,7 @@ public class Supplier {
     }
 
     public String getName() {
-        return name;
+        return toTitleCase(name);
     }
 
     public void setName(String name) {
@@ -48,9 +47,10 @@ public class Supplier {
     }
 
     public String getAddress() {
-        return address;
+        return toTitleCase(address);
     }
 
+    
     public void setAddress(String address) {
         this.address = address;
     }
@@ -68,6 +68,10 @@ public class Supplier {
         }
     }
 
+    public boolean isStatus() {
+        return status;
+    }
+    
     public boolean getStatus() {
         return status;
     }
@@ -81,4 +85,17 @@ public class Supplier {
         return "Supplier{" + "id=" + id + ", name=" + name + ", address=" + address + ", phone=" + phone + ", status=" + status + '}';
     }
     
+    
+    public String toTitleCase(String value){
+        String[] arr = value.split(" ");
+        String result = "";
+        for (String word : arr) {
+            if(word.trim().length()>0){
+                String newWord = word.substring(0,1).toUpperCase()+
+                                word.substring(1).toLowerCase();
+                result+=newWord+" ";
+            }
+        }
+        return result.trim();
+    }
 }

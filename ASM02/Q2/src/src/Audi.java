@@ -37,14 +37,14 @@ public class Audi extends Vehicle {
     }
 
     public String getColor() {
-        return color;
+        return toTitleCase(color);
     }
-
+ 
     public void setColor(String color) {
         String[] colors = {"Black", "White", "Red", "Gray"};
         boolean check = false;
         for (String my_color : colors) {
-            if (color.equals(my_color)) {
+            if (color.equalsIgnoreCase(my_color)) {
                 check = true;
             }
         }

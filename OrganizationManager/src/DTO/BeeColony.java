@@ -4,6 +4,8 @@
  */
 package DTO;
 
+import java.util.Objects;
+
 /**
  *
  * @author tungi
@@ -38,4 +40,29 @@ public class BeeColony extends Colony implements Role {
     public void createWorker() {
         System.out.println("Worker bees perform all the work of the bees");
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final BeeColony other = (BeeColony) obj;
+        return Objects.equals(this.type, other.type) 
+                && Objects.equals(this.size, other.size) 
+                && Objects.equals(this.place, other.place) ;
+    }
+    
+    
 }

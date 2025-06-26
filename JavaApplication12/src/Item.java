@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * @author tungi
  */
-public class Item {
+public class Item implements Comparable<Item>{
 
     private int value;
     private String creator;
@@ -56,5 +56,12 @@ public class Item {
     public String toString() {
         return "Value: " + this.value + ", Creator: " + this.creator;
     }
+
+    @Override
+    public int compareTo(Item o) {
+        return this.value - o.value;
+    }
+    
+    
 
 }

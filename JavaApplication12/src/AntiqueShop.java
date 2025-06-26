@@ -2,7 +2,7 @@
 import java.util.Scanner;
 
 public class AntiqueShop {
-    private static ItemList itemList = new ItemList(); // Static instance for the shop
+    private static ItemArrayList itemList = new ItemArrayList(); // Static instance for the shop
     private static Scanner sc = new Scanner(System.in);
     
     public static void main(String[] args) {
